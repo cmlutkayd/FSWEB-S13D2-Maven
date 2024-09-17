@@ -33,45 +33,44 @@ public class Main {
             return  "Invalid Value";
 
         char[] digits = String.valueOf(number).toCharArray();
-        StringBuilder numToText = new StringBuilder();
+       String numToText = "";
         for (char digit : digits) {
             switch (digit) {
                 case '0':
-                    numToText.append("Zero ");
+                    numToText += "Zero ";
                     break;
                 case '1':
-                    numToText.append("One ");
+                    numToText += "One ";
                     break;
                 case '2':
-                    numToText.append("Two ");
+                    numToText += "Two ";
                     break;
                 case '3':
-                    numToText.append("Three ");
+                    numToText += "Three ";
                     break;
                 case '4':
-                    numToText.append("Four ");
+                    numToText += "Four ";
                     break;
                 case '5':
-                    numToText.append("Five ");
+                    numToText += "Five ";
                     break;
                 case '6':
-                    numToText.append("Six ");
+                    numToText += "Six ";
                     break;
                 case '7':
-                    numToText.append("Seven ");
+                    numToText += "Seven ";
                     break;
                 case '8':
-                    numToText.append("Eight ");
+                    numToText += "Eight ";
                     break;
                 case '9':
-                    numToText.append("Nine ");
+                    numToText += "Nine ";
                     break;
-                default:
-                    throw new IllegalStateException("Unexpected value: " + digit);
+
             }
 
         }
-        return numToText.toString().trim();
+        return numToText.trim();
 
     }
 }
