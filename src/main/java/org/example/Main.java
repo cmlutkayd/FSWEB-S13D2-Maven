@@ -7,8 +7,8 @@ public class Main {
     public static boolean isPalindrome(int number) {
         number = Math.abs(number);
         char[] digits = String.valueOf(number).toCharArray();
-        String reserved ="";
-        for (int i = digits.length - 1; i>=0; i--){
+        String reserved = "" ;
+        for (int i = digits.length - 1; i>=0; i--) {
             reserved += digits[i];
         }
         return reserved.equalsIgnoreCase(String.valueOf(number));
@@ -33,43 +33,45 @@ public class Main {
             return  "Invalid Value";
 
         char[] digits = String.valueOf(number).toCharArray();
-        String numToText = "" ;
+        StringBuilder numToText = new StringBuilder();
         for (char digit : digits) {
             switch (digit) {
                 case '0':
-                    numToText += "Zero ";
+                    numToText.append("Zero ");
                     break;
                 case '1':
-                    numToText += "One ";
+                    numToText.append("One ");
                     break;
                 case '2':
-                    numToText += "Two ";
+                    numToText.append("Two ");
                     break;
                 case '3':
-                    numToText += "Three ";
+                    numToText.append("Three ");
                     break;
                 case '4':
-                    numToText += "Four ";
+                    numToText.append("Four ");
                     break;
                 case '5':
-                    numToText += "Five ";
+                    numToText.append("Five ");
                     break;
                 case '6':
-                    numToText += "Six ";
+                    numToText.append("Six ");
                     break;
                 case '7':
-                    numToText += "Seven ";
+                    numToText.append("Seven ");
                     break;
                 case '8':
-                    numToText += "Eight ";
+                    numToText.append("Eight ");
                     break;
                 case '9':
-                    numToText += "Nine ";
+                    numToText.append("Nine ");
                     break;
+                default:
+                    throw new IllegalStateException("Unexpected value: " + digit);
             }
 
         }
-        return numToText.trim();
+        return numToText.toString().trim();
 
     }
 }
