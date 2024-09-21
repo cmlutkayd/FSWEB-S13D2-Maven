@@ -13,7 +13,6 @@ public class Main {
         }
         return reserved.equalsIgnoreCase(String.valueOf(number));
 
-
     }
 
     public static boolean isPerfectNumber(int number) {
