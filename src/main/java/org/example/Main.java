@@ -28,6 +28,7 @@ public class Main {
         return number == total;
     }
 
+
     public  static String numberToWords(int number) {
         if(number<0)
             return  "Invalid Value";
